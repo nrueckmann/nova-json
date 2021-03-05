@@ -73,7 +73,7 @@ class JSON extends MergeValue
         if (is_string($attribute)) {
             $this->attribute = $attribute;
         } else {
-            $this->attribute = Str::of($name)
+            $this->attribute = (string) Str::of($name)
                 ->lower()
                 ->replace(' ', '_');
         }
